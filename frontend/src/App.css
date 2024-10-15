@@ -1,42 +1,110 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* App container styling */
+/* Apply a global style for the body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #282c34; /* Dark background */
+  color: #ffffff; /* White text color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #282c34;
+  color: #ffffff;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Main title */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #61dafb;
 }
 
-.card {
-  padding: 2em;
+/* Input and Button Styling */
+input[type="text"] {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #444;
+  margin-right: 0.5rem;
+  width: 250px;
+  outline: none;
+  color: #ffffff; /* Set text color to white for visibility */
+  background-color: #1e1e1e; /* Dark background to contrast with light text */
+  caret-color: #61dafb; /* Light blue cursor for better visibility */
 }
 
-.read-the-docs {
+button {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background-color: #61dafb;
+  color: #282c34;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #21a1f1;
+}
+
+/* Todo List Styling */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 1.5rem;
+  width: 300px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem;
+  background-color: #3a3f47;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  font-size: 1.1rem;
+}
+
+/* Todo text styling */
+li span {
+  cursor: pointer;
+  flex-grow: 1;
+}
+
+li span.completed {
+  text-decoration: line-through;
   color: #888;
+}
+
+/* Delete button styling */
+li button {
+  padding: 0.4rem;
+  background-color: #e63946;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+li button:hover {
+  background-color: #d62839;
 }
